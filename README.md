@@ -1,108 +1,170 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+## Purpose of the project
 
-Welcome USER_NAME,
+Due to my background as an Art Historian and my MA in antiques I thought it would be a good idea of instead of creating a online cookbook,
+as suggested on the Assesment Handbook, to take the structure of the project and adapt it to online an aution house.
+Online aution houses have been evolving during the last ten years and right now are having huge success selling from the traditional antiques, modern art, to the lastest trend, the NFT art.
+In this proyect I will focus in a basic structure as there is time constraining issues.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## User stories
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
 
-## Gitpod Reminders
+## Features
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+* **Navbar**
 
-`python3 -m http.server`
+The navbar gives a friendly user experience as links the homepage, the activity section, and the Contact-us page.
+Also on the mobile version, it can be found on the top right corner as a burger button that collapses, giving a better UX experience.
 
-A blue button should appear to click: _Make Public_,
+## Desing
 
-Another blue button should appear to click: _Open Browser_.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
 
-A blue button should appear to click: _Make Public_,
+* **Typography**
 
-Another blue button should appear to click: _Open Browser_.
+    The font use on the website has been chosen from [Google Fonts](https://fonts.google.com/). I have chosen Lato for the Navbar and headers and Roboto for the body
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+* **Colour Scheme**
 
-To log into the Heroku toolbelt CLI:
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+## Wireframe
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+The wireframes that can be found below have been created using Balsamiq during the Scope plane part of the design and planning process of this project.
 
-------
+* [Desktop Wireframe]()
 
-## Release History
+* [Mobile Wireframe]()
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+## Technologies used
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+As it follows below
+### Languages used
+* [HTML5](https://en.wikipedia.org/wiki/HTML5) 
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+* [CSS3](https://en.wikipedia.org/wiki/CSS)
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+* [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+### Frameworks, Libraries & Programs Used
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+1. [Bootstrap 4.6](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+    I have used Bootstrap to help with the responsiveness of the website as well as the styling
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+2. [Google Font](https://fonts.google.com/)
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+    I have used Google font to import the fonts Lato and Roboto into my style.css file, which is being used on all pages throughout the project
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+3. [Font Awesome](https://fontawesome.com/)
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+    Used for the icons on this website
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+4. [Balsamiq](https://balsamiq.com/)
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+    I used Balsamiq to create the wireframing during the design process
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+5. [Git](https://git-scm.com/)
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+    Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub
 
-------
+6. [Github](https://github.com/Gloria-21/Living-Salamanca)
 
-## FAQ about the uptime script
+    I used GitHub to store the project's code after being pushed from Gitpod
 
-**Why have you added this script?**
+7. [TinyPNG](https://tinypng.com/)
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+    I used TinyPNG to compress images making them load faster
 
-**How will this affect me?**
+## Testing
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+I have done the testing for my website using the dev tools on google chrome. I have been testing regularly checking that the results were the expected on different sizes, from mobile devices to desktop and tablet, making sure the website was responsive in all of them.
+I used this tool as a main source to implement my code, trying the functionality and styling effects there first and adding them to my code afterward.
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+At a later stage, when the site was deployed, the website was tested by family and friends who looked on different devices and gave feedback on responsitivity and user experience.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+### Validator testing
 
-**So….?**
+To check the validity of the codes I have used [W3C Markup Validation](https://validator.w3.org/), [W3C CSS Validation](https://jigsaw.w3.org/css-validator/) and [JS Hint](https://jshint.com/)
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+* Index.html page has passed the validator with no error [index.html]()
+* Style.css page has passed the validation with 0 errors [style.css]()
+* JavaScript has been validated on JS hint and it doesn't bring any warnings
 
-**Can I opt out?**
+### Performance
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+To check the website performance level as well as the speed I used [Google lighthouse](https://developers.google.com/web/tools/lighthouse)
+![Atl text]()
+## Test user stories
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+1. 
 
-**Anything more?**
+## Fixed bugs
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+## Suported screen and browsers
 
----
+The website was mainly tested on different screen sizes using the devtool.
+The web behaves in a responsive way in the different mobile sizes (Moto G4, Galaxy S5/A71, Pixel 2/2XL/3, iPhone 5/SE/6/7/8, iPhone 6/7/8 plus, iPhone X/10/12)
 
-Happy coding!
+It also behave as expected on tablets (iPad, iPad pro, surface duo)
+
+* Google Chrome: website worked as expected
+* Firefox: website worked as expected
+* Microsoft Edge: website worked as expected
+* Safari: website worked as expected
+## Deployment
+
+This website has been developed on Gitpod, using Github to host the repository
+
+### Via Gitpod 
+
+These are the step followed to deploy via Gitpod:
+1. Log in to the Gitpod account 
+2. Chose the MS2 repository
+3. Add your code 
+4. Type "python3 -m http.server" on the terminal
+5. A new screen will pop up with the results of the code on the browser
+### GitHub pages
+
+These are the steps followed to deploy this website using GitHub:
+
+1. Log in to your  GitHub account
+2. Select MS2 on my repositories
+3. Go to settings on the repository
+4. Scroll down to the GitHub pages area
+5. Select the Master Branch from the Source dropdown menu
+6. Confirm my selection 
+
+After this, the website was live on GitHub pages
+
+### Making a Local Clone
+
+Making a local clone of your repository allow others to view the original code and even to add changes on their own local copy.
+
+To do so you have to 
+1. Log in to GitHub and select teh repository you wish to clone
+2. Click the download button or Code button
+3. Copy the url that will show on the box
+4. Open Gitpod (or your preferred IDE)
+5. Use the "git clone" command in the terminal followed by url copied before
+
+A clone of the original repository should be available on your computer
+## Credits
+ ### Content
+ * [CataWiki](https://www.catawiki.com/en/)
+ * [Sotheby's](https://www.sothebys.com/en/?locale=en)
+ * [Christies](https://www.christies.com/?lid=1&sc_lang=en)
+ * [Bonhams](https://www.bonhams.com/)
+ ### Media
+ Some of the photos shown on this prject have been taken from [Pexel](https://www.pexels.com/) as per below
+
+ Also I have used [Unplash]()
+  
+ ### Code
+ * [Code Intitute](https://codeinstitute.net/) was the main source for this project
+ * [Slack Community](https://slack.com/intl/en-no/) for their support, specially to Sean Young for sharing his knowledge on Js with me
+ * [Stack Overflow](https://stackoverflow.com/) and [W3school](https://www.w3schools.com/) as main places to go to resolve questions
+ 
+
+ ### Acknowledgements:
+* I would like to thank my fellow students in the Slack community and the tutor assistance for their help, without them I could not have finished the project on time.
+* I would like to thank my mentor for his advice and aid in debugging technical issues
+* And also my partner and family for putting up with me when I am under pressure

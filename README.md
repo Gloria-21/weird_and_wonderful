@@ -30,7 +30,7 @@ Also on the mobile version, it can be found on the top right corner as a burger 
 
 The wireframes that can be found below have been created using Balsamiq during the Scope plane part of the design and planning process of this project.
 
-* [Desktop Wireframe]()
+* [Desktop Wireframe](file:///home/chronos/u-47a88eec4ef35331417eef91372e23e15aebb1fd/MyFiles/Downloads/Weird%20and%20wonderful/Weird%20and%20wonderful%20-Desktop.pdf)
 
 * [Mobile Wireframe]()
 

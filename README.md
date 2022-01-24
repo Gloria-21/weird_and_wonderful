@@ -30,10 +30,10 @@ Also on the mobile version, it can be found on the top right corner as a burger 
 
 * **Colour Scheme**
 
-The color range chosen for the website is coming from a [piece](/static/images/blue_lapis.png) of French porcelain manufacturer of Sevres that has the blue lapis as one of the most traditional colors.
+The color range chosen for the website is coming from a [piece](/static/img/blue_lapis.png) of French porcelain manufacturer of Sevres that has the blue lapis as one of the most traditional colors.
 To generate this color scheme I have used [coolors](https://coolors.co/)
 
-[Palette](/static/images/color_scheme.png)
+[Palette](/static/img/color_scheme.png)
 
 ## Wireframe
 
@@ -66,7 +66,7 @@ As it follows below
 
 2. [Google Font](https://fonts.google.com/)
 
-    I have used Google font to import the fonts Lato and Roboto into my style.css file, which is being used on all pages throughout the project
+    I have used Google font to import the fonts that have been used on all pages throughout the project
 
 3. [Font Awesome](https://fontawesome.com/)
 
@@ -92,7 +92,11 @@ As it follows below
 
     I used Heroku as a deployment tool
 
-9. [StartBoostrap](https://startbootstrap.com/)
+9. [MongoDB](https://www.mongodb.com/)
+
+    Used to create the database that holds all the data from the website
+
+10. [StartBoostrap](https://startbootstrap.com/)
 
     I use the start boostrap [template](https://startbootstrap.com/template/shop-homepage) to style the website
 
@@ -140,7 +144,7 @@ This website has been developed on Gitpod, using Github to host the repository
 
 These are the step followed to deploy via Gitpod:
 1. Log in to the Gitpod account 
-2. Chose the MS2 repository
+2. Chose the Weird and Wondeful repository
 3. Add your code 
 4. Type "python3 -m http.server" on the terminal
 5. A new screen will pop up with the results of the code on the browser
@@ -149,7 +153,7 @@ These are the step followed to deploy via Gitpod:
 These are the steps followed to deploy this website using GitHub:
 
 1. Log in to your  GitHub account
-2. Select MS2 on my repositories
+2. Select Weird and wonderful on my repositories
 3. Go to settings on the repository
 4. Scroll down to the GitHub pages area
 5. Select the Master Branch from the Source dropdown menu
@@ -169,6 +173,25 @@ To do so you have to
 5. Use the "git clone" command in the terminal followed by url copied before
 
 A clone of the original repository should be available on your computer
+
+### Heroku App
+
+1. Log in to Heroku
+2. From the dashboard click in "Create a New App" and give it a unique name
+3. Add the region that you are on and click on "Create App"
+4. On your Gitpod terminal install "npm install -g heroku"We then need to tell Heroku which applications and dependencies are required to run the app. We need to add ""pip3 freeze --local > requirements.txt". This file is needed so that Heroku knows which files needs to be installed.
+5. In the terminal we also need to add "echo web: python app.py > Procfile" to create a Procfile. This file is needed so that Heroku knows which file is needed as its entry point to get the app running.
+6. Set up automatic deployment by clicking the deploy tab and clicking GitHub as the deployment method.
+7. Ensure your GitHub profile is displayed, then add the name of the repository and click search.
+8. Click the "Settings" tab and then click "Reveal Config Vars".
+9. Set the Key values as below
+    * IP = 0.0.0.0
+    * PORT = 5000
+    * MONGO_DBNAME = YOUR MONGODB DATABASE
+    * MONGO_URI = YOUR MONGODB URI
+    * SECRET_KEY = YOUR SECRET KEY
+10. Click the "Deploy" tab and "Enable Automatic Deployment"
+
 ## Credits
  ### Content
  * [CataWiki](https://www.catawiki.com/en/)

@@ -5,7 +5,14 @@ as suggested on the Assesment Handbook, to take the structure of the project and
 Online aution houses have been evolving during the last ten years and right now are having huge success selling from the traditional antiques, modern art, to the lastest trend, the NFT art.
 In this proyect I will focus in a basic structure as there is time constraining issues.
 
+This multiple-page website has been created using Flask. In it, the user will see a Home page, About, and a Category page where all the different collections can be checked. Also, the user will be able to create an account and log in to a profile page, place bids on existing lots, as well as create new lots with items that the user wants to sell. Both, the bids and the new lots can be also deleted if the user change his mind.
 ## User stories
+
+* As a new user I want to be able to create a new account and be part of Weird and Wonderful
+* As a new user I want information of how the action works and upcoming auctions
+* As a member of Weird and Wonderful I want to bid on lots that are interesting for me
+* As a seller I want to create a lot to resell my items
+* As a seller I want to be able to edit and delete my lot as well as see my bids
 
 
 ## Features
@@ -17,14 +24,16 @@ Also on the mobile version, it can be found on the top right corner as a burger 
 
 ## Desing
 
-
-
 * **Typography**
 
     The font use on the website has been chosen from [Google Fonts](https://fonts.google.com/). I have chosen Lato for the Navbar and headers and Roboto for the body
 
 * **Colour Scheme**
 
+The color range chosen for the website is coming from a [piece](/static/images/blue_lapis.png) of French porcelain manufacturer of Sevres that has the blue lapis as one of the most traditional colors.
+To generate this color scheme I have used [coolors](https://coolors.co/)
+
+[Palette](/static/images/color_scheme.png)
 
 ## Wireframe
 
@@ -44,6 +53,11 @@ As it follows below
 * [CSS3](https://en.wikipedia.org/wiki/CSS)
 
 * [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+
+* [Python](https://www.python.org/)
+
+* [Flask](https://flask.palletsprojects.com/en/2.0.x/)
+
 ### Frameworks, Libraries & Programs Used
 
 1. [Bootstrap 4.6](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
@@ -73,6 +87,14 @@ As it follows below
 7. [TinyPNG](https://tinypng.com/)
 
     I used TinyPNG to compress images making them load faster
+
+8. [Heroku](https://id.heroku.com/login)
+
+    I used Heroku as a deployment tool
+
+9. [StartBoostrap](https://startbootstrap.com/)
+
+    I use the start boostrap [template](https://startbootstrap.com/template/shop-homepage) to style the website
 
 ## Testing
 
@@ -156,7 +178,7 @@ A clone of the original repository should be available on your computer
  ### Media
  Some of the photos shown on this prject have been taken from [Pexel](https://www.pexels.com/) as per below
 
- Also I have used [Unplash]()
+ Also I have used [Unplash](https://unsplash.com/@jeremybezanger?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
   
  ### Code
  * [Code Intitute](https://codeinstitute.net/) was the main source for this project

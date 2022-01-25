@@ -586,6 +586,10 @@ progress {
   color: #6c757d;
 }
 
+.foot-container {
+  background-color: #8c7db1;
+}
+
 .container,
 .container-fluid,
 .container-xxl,
@@ -2515,6 +2519,11 @@ textarea.form-control-lg {
 .form-check-inline {
   display: inline-block;
   margin-right: 1rem;
+}
+
+.btn {
+ background-color: #380ADE;
+ color: #f4f5f6;
 }
 
 .btn-check {

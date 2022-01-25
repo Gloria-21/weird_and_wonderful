@@ -1,4 +1,27 @@
 {% extends "base.html" %}
 {% block content %}
     <h1>About page</h1>
+
+
+
+    <h1>Sign up (test)</h1>
+    <form method="POST" action="{{ url_for('register') }}">
+        <div>
+          <input id="email" name="email">
+          <label for="email">Email</label>
+        </div>
+        <div>
+          <input id="password" name="password" >
+          <label for="password">Password</label>
+        </div>
+        <div>
+          <input id="user_name" name="username" >
+          <label for="user_name">User Name</label>
+        </div>
+        <div class="row">
+          <button type="submit">
+            Sign Up
+          </button>
+        </div>
+    </form>   
 {% endblock %}

@@ -34,12 +34,18 @@ def categories():
     return render_template("categories.html")
 
 
+# Database app
 @app.route("/register", methods=["GET", "POST"])
 def register():
+
     if request.method == "POST":
+        
         # check if username already exists in db
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
+
+        print('existing_user: ')
+        print(existing_user)            
 
         if existing_user:
             flash("Username already exists")
@@ -47,9 +53,18 @@ def register():
 
         register = {
             "username": request.form.get("username").lower(),
-            "password": generate_password_hash(request.form.get("password"))
+            "password": generate_password_hash(request.form.get("password")),
+            "email": request.form.get("email")
         }
+
         mongo.db.users.insert_one(register)
+
+        registered_user = mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()})
+
+        # check that the user has been successfully registerd
+        print('registered_user: ')
+        print(registered_user)            
 
         # put the new user into 'session' cookie
         session["user"] = request.form.get("username").lower()

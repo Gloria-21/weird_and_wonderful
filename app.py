@@ -42,10 +42,7 @@ def register():
         
         # check if username already exists in db
         existing_user = mongo.db.users.find_one(
-            {"username": request.form.get("username").lower()})
-
-        print('existing_user: ')
-        print(existing_user)            
+            {"username": request.form.get("username").lower()})          
 
         if existing_user:
             flash("Username already exists")

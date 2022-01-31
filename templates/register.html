@@ -1,19 +1,33 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 class="center-align">Create Account</h3>
+  <div class="col-md-9">
+    <h3 class="center-align">Create Account</h3>
 
-<form method="POST" action="{{ url_for('register') }}">
-  <div class="form-group">
-    <label for="email">Email address</label>
-    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
-  </div>
-  <div class="form-group">
-    <label for="password">Password</label>
-    <input type="password" class="form-control" id="password" placeholder="Password">
-    <i class="fas fa-lock"></i>
-  </div>
-  <button type="submit" class="btn btn-large text-shadow">Submit</button>
-</form>
- 
+    <div class="row">
+      <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('register') }}">
+        <div class="card">
+          <div class="row">
+            <label for="username">Username</label>
+            <input type="username" id="username" name="username" type="text" minlength="5" maxlength="15"
+              pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
+            <i class="fas fa-user"></i>
+          </div>
+
+          <div class="row">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" type="password" minlength="5" maxlength="15"
+              pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
+            <i class="fas fa-lock"></i>
+          </div>
+
+          <div class="row">
+            <button type="submit" class="col s6 btn-large">Submit</button>
+          </div>
+
+        </div>
+      </form>
+    </div>
+
+
 {% endblock %}

@@ -71,8 +71,23 @@
         </div>
     </header>
     <!-- Section-->
-    {% block content%}
-    {% endblock %}
+
+    <section>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for messages in messages %}
+                    <div class="row flashes">
+                        <h4 class="center-align">{{ message }}</h4>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </section>
+
+    <main class="container">
+        {% block content%}
+        {% endblock %}
+    </main>
     <!-- Footer-->
     <footer class="py-5 foot-container">
             <p class="m-0 text-center text-white">Copyright &copy; Weird and Wonderful 2022</p>

@@ -125,6 +125,8 @@ To check the website performance level as well as the speed I used [Google light
 
 ## Fixed bugs
 
+* I decided to use a start boostrap template as the time that I had to develop this project was quite tight, however I have found quite challeging the adaptation of that template to my project, to the point that I think I could've done more without it.
+
 ## Suported screen and browsers
 
 The website was mainly tested on different screen sizes using the devtool.

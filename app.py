@@ -39,7 +39,7 @@ def categories():
 def register():
 
     if request.method == "POST":
-        # check if username already exists in db            
+        # check if username already exists
         if mongo.db.users.find_one(
             {"username": request.form.get("username").lower()}):
             flash("Username already exists")
@@ -58,7 +58,7 @@ def register():
 
         # check that the user has been successfully registerd
         print('registered_user: ')
-        print(registered_user)            
+        print(registered_user)
 
         # put the new user into 'session' cookie
         session["user"] = request.form.get("username").lower()
@@ -98,10 +98,21 @@ def login():
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
-    # take the session user's username from de db 
+    # take the session user's username from de db
     username: mongo.db.users.find_one(
         {"username": session["user"]})["username"]
-    return render_template("profile.html", username=username)
+    if session["user"]:
+        return render_template("profile.html", username=username)
+
+    return redirect(url_for("login"))
+
+
+@app.route("/logout")
+def logout():
+    # remove user from session cookies
+    flash("You have been logged out")
+    session.pop("user")
+    return redirect(url_for("login"))
 
 
 if __name__ == "__main__":

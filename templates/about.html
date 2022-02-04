@@ -1,14 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
-<h3 class="strong">About page</h3>
+<h3 class="strong">About Us</h3>
 
-<div class="col-md-8">
+<div class="col-md-12 offset-m2">
   <p>
     Founded in 2008 with a mission to make special objects more accessible, we now offer over 600 auctions each week,
     across multiple categories such as collectables, art, design, jewellery, watches, classic cars and more.
   </p>
-
-  <br>
+</div>
+<br>
+<div class="col-md-12 offset-m2">
   <h4 class="strong"> For Buyers </h4>
 
   <p>Buyers are able to browse and bid on special objects from all over the world, across our different categories.</p>
@@ -18,9 +19,10 @@
   <p>The seller your new special object over to you</p>
 
   <a class="btn btn-outline-dark mt-auto" href="{{ url_for('register') }}">Ready to bid</a>
-
+</div>
+<br>
+<div class="col-md-12 offset-m2">
   <h4 class="strong"> For Sellers </h4>
-
   <p>
     W&W allows sellers to reach an audience of over 10 million unique visitors from over 60 countries. Our expert
     curation results in fast sales, with over two thirds of the special objects in auction selling in just 10 days. Once

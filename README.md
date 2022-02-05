@@ -10,7 +10,6 @@ This multiple-page website has been created using Flask. In it, the user will se
 
 * As a new user I want to be able to create a new account and be part of Weird and Wonderful
 * As a new user I want information of how the action works and upcoming auctions
-* As a member of Weird and Wonderful I want to bid on lots that are interesting for me
 * As a seller I want to create a lot to resell my items
 * As a seller I want to be able to edit and delete my lot as well as see my bids
 
@@ -19,8 +18,6 @@ This multiple-page website has been created using Flask. In it, the user will se
 
 * **Navbar**
 
-The navbar gives a friendly user experience as links the homepage, the activity section, and the Contact-us page.
-Also on the mobile version, it can be found on the top right corner as a burger button that collapses, giving a better UX experience.
 
 ## Desing
 
@@ -39,9 +36,9 @@ To generate this color scheme I have used [coolors](https://coolors.co/)
 
 The wireframes that can be found below have been created using Balsamiq during the Scope plane part of the design and planning process of this project.
 
-* [Desktop Wireframe](file:///home/chronos/u-47a88eec4ef35331417eef91372e23e15aebb1fd/MyFiles/Downloads/Weird%20and%20wonderful/Weird%20and%20wonderful%20-Desktop.pdf)
+* [Desktop Wireframe](https://drive.google.com/file/d/1r_blYsGN2fyqPgxVjsIQ6QEEoCK9pix7/view?usp=sharing)
 
-* [Mobile Wireframe]()
+* [Mobile Wireframe](https://drive.google.com/file/d/1Ly-IzFd-Bexbi70tjaBv9-pG1ORB01g7/view?usp=sharing)
 
 
 ## Technologies used
@@ -121,7 +118,13 @@ To check the website performance level as well as the speed I used [Google light
 ![Atl text]()
 ## Test user stories
 
-1. 
+1. As a new user I want to be able to create a new account and be part of Weird and Wonderful. To create an account the new user has different options. The most obvious one is to click in Create account button on the navbar, also on the About secction there are two buttons that lead to the Create Account section. Also on at the bottom of the Log In section there is a link to Create Account. 
+
+2. As a new user I want information of how the action works and upcoming auctions. The new user will find all the information on how the page works in the About section. Also on the Home page the user can see the lots included in the next auction. Due to time constrictions I won't be able to develop more than one upcoming Auctions. 
+
+3. As a seller I want to create a lot to resell my items. The user can, once the profile is created, to add items and create a lot.
+
+4. As a seller I want to be able to edit and delete my lot as well as see my bids. The user will be able also to edit and delete items from the lots created beforehand.
 
 ## Fixed bugs
 

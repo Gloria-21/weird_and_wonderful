@@ -145,6 +145,7 @@ It also behave as expected on tablets (iPad, iPad pro, surface duo)
 * Firefox: website worked as expected
 * Microsoft Edge: website worked as expected
 * Safari: website worked as expected
+
 ## Deployment
 
 This website has been developed on Gitpod, using Github to host the repository
@@ -208,10 +209,10 @@ A clone of the original repository should be available on your computer
  * [Christies](https://www.christies.com/?lid=1&sc_lang=en)
  * [Bonhams](https://www.bonhams.com/)
  ### Media
- Some of the photos shown on this prject have been taken from [Pexel](https://www.pexels.com/) as per below
+ The picture shown on this project have been taken from [Unsplash](https://unsplash.com/photos/sCY8pkJ_KXw)
 
- Also I have used [Unplash](https://unsplash.com/@jeremybezanger?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  
+ For the cards I have taken the pictures from [Bonhams](https://www.bonhams.com/) website
+
  ### Code
  * [Code Intitute](https://codeinstitute.net/) was the main source for this project
  * [Slack Community](https://slack.com/intl/en-no/) for their support, specially to Sean Young for sharing his knowledge on Js with me

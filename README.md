@@ -128,8 +128,11 @@ To check the website performance level as well as the speed I used [Google light
 
 ## Fixed bugs
 
-* I decided to use a start boostrap template as the time that I had to develop this project was quite tight, however I have found quite challeging the adaptation of that template to my project. I thought to create my own CSS to adapt my project to it, however I found it was easier to add styling classes into the HTML and modify the CSS given by the template.
+* I decided to use a start bootstrap template as the time that I had to develop this project was quite tight, however, I have found quite challeging the adaptation of that template to my project. I thought to create my own CSS to adapt my project to it, however, I found it was easier to add styling classes into the HTML and modify the CSS given by the template. Due to the difficulty to adapt the template the color palalette and the font before mentioned haven't been used in their entirety.
 
+* I created flash messages to be displayed on the screen in order to inform the user whether the registration was successful when an account was created, also, when the username or password wasn't correct or to also inform the user when it was being logged out, however, none of the messages are displaying on the screen.
+
+* 
 
 ## Suported screen and browsers
 

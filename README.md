@@ -128,7 +128,8 @@ To check the website performance level as well as the speed I used [Google light
 
 ## Fixed bugs
 
-* I decided to use a start boostrap template as the time that I had to develop this project was quite tight, however I have found quite challeging the adaptation of that template to my project, to the point that I think I could've done more without it.
+* I decided to use a start boostrap template as the time that I had to develop this project was quite tight, however I have found quite challeging the adaptation of that template to my project. I thought to create my own CSS to adapt my project to it, however I found it was easier to add styling classes into the HTML and modify the CSS given by the template.
+
 
 ## Suported screen and browsers
 

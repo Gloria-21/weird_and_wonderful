@@ -1,6 +1,6 @@
 ## Purpose of the project
 
-Due to my background as an Art Historian and my MA in antiques I thought it would be a good idea of instead of creating a online cookbook,
+Due to my background as an Art Historian I thought it would be a good idea of instead of creating a online cookbook,
 as suggested on the Assesment Handbook, to take the structure of the project and adapt it to online an aution house.
 Online aution houses have been evolving during the last ten years and right now are having huge success selling from the traditional antiques, modern art, to the lastest trend, the NFT art.
 In this proyect I will focus in a basic structure as there is time constraining issues.
@@ -16,7 +16,17 @@ This multiple-page website has been created using Flask. In it, the user will se
 
 ## Features
 
-* **Navbar**
+* Home page
+* About
+* Create account
+* Log in
+
+
+## Features to be developed
+
+Due to lack of time there has been some features that hasn't been developed
+ * Auctions section with the categories actions in a dropdown with a calendar showing the upcoming auctions
+ * Bid button - it has been connected to create an account due to lack of time
 
 
 ## Desing
@@ -95,7 +105,7 @@ As it follows below
 
 10. [StartBoostrap](https://startbootstrap.com/)
 
-    I use the start boostrap [template](https://startbootstrap.com/template/shop-homepage) to style the website
+    I have used the start boostrap [template](https://startbootstrap.com/template/shop-homepage) to style the website
 
 ## Testing
 
@@ -106,11 +116,12 @@ At a later stage, when the site was deployed, the website was tested by family a
 
 ### Validator testing
 
-To check the validity of the codes I have used [W3C Markup Validation](https://validator.w3.org/), [W3C CSS Validation](https://jigsaw.w3.org/css-validator/) and [JS Hint](https://jshint.com/)
+To check the validity of the codes I have used 
+* [W3C Markup Validation](https://validator.w3.org/) 
+* [W3C CSS Validation](https://jigsaw.w3.org/css-validator/)
+* [JS Hint](https://jshint.com/)
+* [PEP8Online](http://pep8online.com/)
 
-* Index.html page has passed the validator with no error [index.html]()
-* Style.css page has passed the validation with 0 errors [style.css]()
-* JavaScript has been validated on JS hint and it doesn't bring any warnings
 
 ### Performance
 
@@ -127,6 +138,9 @@ To check the website performance level as well as the speed I used [Google light
 4. As a seller I want to be able to edit and delete my lot as well as see my bids. The user will be able also to edit and delete items from the lots created beforehand.
 
 ## Fixed bugs
+
+* Register.html wasn't registering the users into Mongo due to the button type not being correct. I changed it to submit and starting working
+## Unfixed bugs
 
 * I decided to use a start bootstrap template as the time that I had to develop this project was quite tight, however, I have found quite challeging the adaptation of that template to my project. I thought to create my own CSS to adapt my project to it, however, I found it was easier to add styling classes into the HTML and modify the CSS given by the template. Due to the difficulty to adapt the template the color palalette and the font before mentioned haven't been used in their entirety.
 
@@ -215,11 +229,11 @@ A clone of the original repository should be available on your computer
 
  ### Code
  * [Code Intitute](https://codeinstitute.net/) was the main source for this project
- * [Slack Community](https://slack.com/intl/en-no/) for their support, specially to Sean Young for sharing his knowledge on Js with me
+ * [Slack Community](https://slack.com/intl/en-no/) for their support, 
  * [Stack Overflow](https://stackoverflow.com/) and [W3school](https://www.w3schools.com/) as main places to go to resolve questions
  
 
  ### Acknowledgements:
-* I would like to thank my fellow students in the Slack community and the tutor assistance for their help, without them I could not have finished the project on time.
-* I would like to thank my mentor for his advice and aid in debugging technical issues
+* I would like to thank my fellow students in the Slack community and the tutor assistance for their help. Also to Tim Nelson for his videos on Code Institute
+* Also to my mentor for reviewing the concepts of Jinja with me. 
 * And also my partner and family for putting up with me when I am under pressure

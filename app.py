@@ -47,8 +47,7 @@ def register():
 
         register = {
             "username": request.form.get("username").lower(),
-            "password": generate_password_hash(request.form.get("password")),
-            "email": request.form.get("email")
+            "password": generate_password_hash(request.form.get("password"))
         }
 
         mongo.db.users.insert_one(register)
@@ -113,6 +112,31 @@ def logout():
     flash("You have been logged out")
     session.pop("user")
     return redirect(url_for("login"))
+
+
+@app.route("/profile/<lot>", methods=["GET", "POST"])
+def create(lot):
+    # allows user to create a lot
+    if request.method == "POST":
+        lot = {
+        "name": request.form.get("name").lower(),
+        "description": request.form.get("description").lower(),
+        "estimate_price": request.form.get("estimate_price"),
+        "image_url": request.form.get("image_url"),
+        "created_by": session["user"]
+        }
+
+        existing_lot = mongo.db.lots.find_one(
+            {"name": request.form.get("name").lower()})
+    if existing_lot:
+        flash("Lot already registered", "error")
+        return render_template("profile.html", lot=existing_lot)
+
+    # using getlogin() returning username
+    user = os.getlogin()
+    mongo.db.lots.insert_one(lot)
+
+    return redirect(url_for("profile"))
 
 
 if __name__ == "__main__":

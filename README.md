@@ -1,5 +1,9 @@
 ## Purpose of the project
 
+![Alt text](/static/img/responsive_mockup.png)
+
+[Deployed website](https://8080-gloria21-weirdandwonderf-v78a5s6dbil.ws-eu30.gitpod.io/index)
+
 Due to my background as an Art Historian I thought it would be a good idea of instead of creating a online cookbook,
 as suggested on the Assesment Handbook, to take the structure of the project and adapt it to online an aution house.
 Online aution houses have been evolving during the last ten years and right now are having huge success selling from the traditional antiques, modern art, to the lastest trend, the NFT art.
@@ -155,7 +159,7 @@ To check the website performance level as well as the speed I used [Google light
 
 * I created flash messages to be displayed on the screen in order to inform the user whether the registration was successful when an account was created, also, when the username or password wasn't correct or to also inform the user when it was being logged out, however, none of the messages are displaying on the screen.
 
-* 
+* I have run out of time and the feature of adding new items in the user's profile is not functional yet, neither is it edit or delete items
 
 ## Suported screen and browsers
 
@@ -239,7 +243,7 @@ A clone of the original repository should be available on your computer
  ### Code
  * [Code Intitute](https://codeinstitute.net/) was the main source for this project
  * [Slack Community](https://slack.com/intl/en-no/) for their support, 
- * [Stack Overflow](https://stackoverflow.com/) and [W3school](https://www.w3schools.com/) as main places to go to resolve questions
+ * [Stack Overflow](https://stackoverflow.com/), [W3school](https://www.w3schools.com/) and [MDN Web Doc](https://developer.mozilla.org/en-US/)as main places to go to resolve questions. Also [Flake8 Rules](https://www.flake8rules.com/) has been very helpful while I was struggling with Python's indentation and syntax.
  
 
  ### Acknowledgements:

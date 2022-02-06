@@ -41,7 +41,7 @@ def register():
     if request.method == "POST":
         # check if username already exists
         if mongo.db.users.find_one(
-            {"username": request.form.get("username").lower()}):
+                {"username": request.form.get("username").lower()}):
             flash("Username already exists")
             return redirect(url_for("register"))
 
@@ -77,7 +77,7 @@ def login():
         if existing_user:
             # ensure hashed password matches user input
             if check_password_hash(existing_user[
-                "password"], request.form.get("password")):
+                    "password"], request.form.get("password")):
                 session["user"] = request.form.get("username").lower()
                 flash("Welcome, {}".format(
                         request.form.get("username")))
@@ -98,8 +98,9 @@ def login():
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     # take the session user's username from de db
-    username: mongo.db.users.find_one(
-        {"username": session["user"]})["username"]
+    username:
+        mongo.db.users.find_one(
+            {"username": session["user"]})["username"]
     if session["user"]:
         return render_template("profile.html", username=username)
 
@@ -119,12 +120,12 @@ def create(lot):
     # allows user to create a lot
     if request.method == "POST":
         lot = {
-        "name": request.form.get("name").lower(),
-        "description": request.form.get("description").lower(),
-        "estimate_price": request.form.get("estimate_price"),
-        "image_url": request.form.get("image_url"),
-        "created_by": session["user"]
-        }
+            "name": request.form.get("name").lower(),
+            "description": request.form.get("description").lower(),
+            "estimate_price": request.form.get("estimate_price"),
+            "image_url": request.form.get("image_url"),
+            "created_by": session["user"]
+            }
 
         existing_lot = mongo.db.lots.find_one(
             {"name": request.form.get("name").lower()})

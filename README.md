@@ -117,16 +117,25 @@ At a later stage, when the site was deployed, the website was tested by family a
 ### Validator testing
 
 To check the validity of the codes I have used 
-* [W3C Markup Validation](https://validator.w3.org/) 
+* [W3C Markup Validation](https://validator.w3.org/)
+   - For [index.html](/static/img/validator/index.png)
+   - For [about.html](/static/img/validator/about.png)
+   - For [profile.html](/static/img/validator/profile.png)
+
+
 * [W3C CSS Validation](https://jigsaw.w3.org/css-validator/)
+
 * [JS Hint](https://jshint.com/)
+
 * [PEP8Online](http://pep8online.com/)
 
 
 ### Performance
 
 To check the website performance level as well as the speed I used [Google lighthouse](https://developers.google.com/web/tools/lighthouse)
-![Atl text]()
+ - [Index](/static/img/validator/index_lighthouse.png)
+ - [About](/static/img/validator/about_lighthouse.png)
+ - [Profile](/static/img/validator/profile_lighthouse.png)
 ## Test user stories
 
 1. As a new user I want to be able to create a new account and be part of Weird and Wonderful. To create an account the new user has different options. The most obvious one is to click in Create account button on the navbar, also on the About secction there are two buttons that lead to the Create Account section. Also on at the bottom of the Log In section there is a link to Create Account. 

@@ -153,11 +153,11 @@ To check the website performance level as well as the speed I used [Google light
 ## Fixed bugs
 
 * Register.html wasn't registering the users into Mongo due to the button type not being correct. I changed it to submit and starting working
+
+* I created flash messages to be displayed on the screen in order to inform the user whether the registration was successful when an account was created, also, when the username or password wasn't correct or to also inform the user when it was being logged out. There was some issues as the messages weren't displaying on the screen. The bug was located on the jinja code on the base.html
 ## Unfixed bugs
 
 * I decided to use a start bootstrap template as the time that I had to develop this project was quite tight, however, I have found quite challeging the adaptation of that template to my project. I thought to create my own CSS to adapt my project to it, however, I found it was easier to add styling classes into the HTML and modify the CSS given by the template. Due to the difficulty to adapt the template the color palalette and the font before mentioned haven't been used in their entirety.
-
-* I created flash messages to be displayed on the screen in order to inform the user whether the registration was successful when an account was created, also, when the username or password wasn't correct or to also inform the user when it was being logged out, however, none of the messages are displaying on the screen.
 
 * I have run out of time and the feature of adding new items in the user's profile is not functional yet, neither is it edit or delete items
 

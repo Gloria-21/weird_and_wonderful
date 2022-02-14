@@ -114,8 +114,8 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/profile/<lot>", methods=["GET", "POST"])
-def create(lot):
+@app.route("/add_lot", methods=["GET", "POST"])
+def add_lot():
     # allows user to create a lot
     if request.method == "POST":
         lot = {
@@ -124,19 +124,12 @@ def create(lot):
             "estimate_price": request.form.get("estimate_price"),
             "image_url": request.form.get("image_url"),
             "created_by": session["user"]
-            }
+        }
+        mongo.db.lots.insert_one(lot)
+        flash("Your lot has been successfully added")
+        return redirect(url_for("profile"))
 
-        existing_lot = mongo.db.lots.find_one(
-            {"name": request.form.get("name").lower()})
-    if existing_lot:
-        flash("Lot already registered", "error")
-        return render_template("profile.html", lot=existing_lot)
-
-    # using getlogin() returning username
-    user = os.getlogin()
-    mongo.db.lots.insert_one(lot)
-
-    return redirect(url_for("profile"))
+    return render_template("add_lot.html")
 
 
 if __name__ == "__main__":

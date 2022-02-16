@@ -11,14 +11,22 @@
     </div>
     <div class="row">
       <div class="col s12 m8 offset-m2">
-          <div class="card-panel">
-              <div class="col s10 offset-s1 m6 offset-m3">
-                  <h4 class="review-header center-align">My lots</h4>
-              </div>
-              
-    {% for lot in lots %}
-    
-    {% endfor %}
-  </div>
-</div>
-{% endblock %}
+        <div class="card-panel">
+          <div class="col s10 offset-s1 m6 offset-m3">
+            <h4 class="review-header center-align">My lots</h4>
+          </div>
+
+          {% for lot in lots %}
+
+          {% endfor %}
+        </div>
+        <div class="row">
+          <div class="col s12">
+            <p class="center-align">
+              Have you got anything to sell?
+              <a href="{{ url_for('add_lot') }}">Add a New Lot</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      {% endblock %}

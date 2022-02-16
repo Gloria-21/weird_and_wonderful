@@ -4,7 +4,23 @@
     <div class="container px-4 px-lg-5 mt-5">
         <div class="row"><h3 class="strong">Add a new lot</h3></div>
       <form method="POST" action="{{ url_for('add_lot') }}">
-     
+        <div class="card">
+          <div class="form-group">
+            <label for="name">Name of your lot</label>
+            <input type="text"  name="name" id="name" placeholder="Name" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="description">Brief description</label>
+            <input type="text" name="description" id="description" placeholder="Description" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="image_url">Image</label>
+            <input type="text" name="image_url" id="image_url" placeholder="image_url" class="form-control">
+          </div>
+          <div class="form-group">
+            <button type="submit" class="col s4 btn btn-secondary">Submit<i class="fa-solid fa-circle-arrow-down"></i></button>
+          </div>
+        </div>
     </form>
     </div>
   </section>

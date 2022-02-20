@@ -3,30 +3,51 @@
 
 <div class="col-md-12 offset-m2">
   <div class="row">
-    <div>
-      <div class="card"></div>
-      <h3 class="center-align">
-        {{ username }}'s Profile
-      </h3>
-    </div>
-    <div class="row">
-      <div class="col s12 m8 offset-m2">
-        <div class="card-panel">
-          <div class="col s10 offset-s1 m6 offset-m3">
-            <h4 class="review-header center-align">My lots</h4>
+
+    <h3 class="center-align">
+      Welcome, {{ username }}
+    </h3>
+  </div>
+
+  <div class="row col s10 offset-s1 m6 offset-m3">
+    <h4 class="review-header center-align">My lots</h4>
+  </div>
+  <div class="row">
+    {% for lot in lots %}
+
+    {% endfor %}
+  </div>
+  <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+    <div class="col mb-5">
+      <div class="card h-100">
+        <!-- Product image-->
+        <img class="card-img-top" src="/static/img/diamonds.jpeg"
+          alt="A diamond eternity ring, by Van Cleef & Arpels" />
+        <!-- Product details-->
+        <div class="card-body p-4">
+          <div class="text-center">
+            <!-- Product name-->
+            <h5 class="fw-bolder">Van Cleef & Arpels Eternity Diamond Ring</h5>
+            <!-- Product price-->
+            £2500 - £3500
           </div>
-
-          {% for lot in lots %}
-
-          {% endfor %}
         </div>
-        <div class="row">
-          <div class="col s12">
-            <p class="center-align">
-              Have you got anything to sell?
-              <a href="{{ url_for('add_lot') }}">Add a New Lot</a>
-            </p>
-          </div>
+        <!-- Product actions-->
+        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent text-center">
+          <a class="btn btn-outline-dark mt-auto" href="">Edit lot</a>
+          <a class="btn btn-outline-dark mt-auto" href="">Delete lot</a>
         </div>
       </div>
-      {% endblock %}
+    </div>
+  </div>
+  <!--bottom secction-->
+  <div class="row justify-content-center">
+    <div class="col s12">
+      <p class="center-align">
+        Have you got anything to sell?
+        <a class="btn btn-outline-dark mt-auto" href="{{ url_for('add_lot') }}">Add a New Lot</a>
+      </p>
+
+    </div>
+  </div>
+  {% endblock %}

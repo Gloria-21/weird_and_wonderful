@@ -119,6 +119,7 @@ def add_lot():
     # allows user to create a lot
     if request.method == "POST":
         lot = {
+            "category_name": request.form.get("category_name"),
             "name": request.form.get("name").lower(),
             "description": request.form.get("description").lower(),
             "estimate_price": request.form.get("estimate_price"),

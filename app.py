@@ -123,17 +123,16 @@ def add_lot():
             "name": request.form.get("name").lower(),
             "description": request.form.get("description").lower(),
             "estimate_price": request.form.get("estimate_price"),
-            "image_url": request.form.get("image_url"),
             "created_by": session["user"]
         }
         mongo.db.lots.insert_one(lot)
         flash("Your lot has been successfully added")
-        return redirect(url_for("profile"))
+        return redirect(url_for("profile", username=session['user']))
 
     return render_template("add_lot.html")
 
     categories = mongo.db.categories.find().sort("category_name", 1)
-    return render_template("add.lot.html", categories=categories)
+    return render_template("add_lot.html", categories=categories)
 
 
 @app.route("/edit_lot", methods=["GET", "POST"])

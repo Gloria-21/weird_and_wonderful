@@ -135,8 +135,8 @@ def add_lot():
     return render_template("add_lot.html", categories=categories)
 
 
-@app.route("/edit_lot", methods=["GET", "POST"])
-def edit_lot(lot_id):
+@app.route("/edit_lot/<name_id>", methods=["GET", "POST"])
+def edit_lot(name_id):
     # allows user to edit a lot
     if request.method == "POST":
         submit = {
@@ -144,14 +144,14 @@ def edit_lot(lot_id):
             "name": request.form.get("name").lower(),
             "description": request.form.get("description").lower(),
             "estimate_price": request.form.get("estimate_price"),
-            "image_url": request.form.get("image_url"),
             "created_by": session["user"]
         }
-        mongo.db.lots.update({"_id": ObjectId(lot_id)}, submit)
+        mongo.db.lots.update({"_id": ObjectId(name_id)}, submit)
         flash("Lot sucessfully updated")
-    
+
+    name = mongo.db.find_one({"_id": ObjectId(name_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
-    return render_template("edit_lot.html", categories=categories)
+    return render_template("edit_lot.html", name=name, categories=categories)
 
 
 if __name__ == "__main__":

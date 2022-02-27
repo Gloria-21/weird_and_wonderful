@@ -15,7 +15,7 @@
   <div class="row">
     {% for lot in lots %}
     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent text-center">
-      <a class="btn btn-outline-dark mt-auto" href="{{ url_for('edit_lot') }}">Edit lot</a>
+      <a class="btn btn-outline-dark mt-auto" href="{{ url_for('edit_lot', name_id=name._id) }}">Edit lot</a>
       <a class="btn btn-outline-dark mt-auto" href="">Delete lot</a>
     </div>
     {% endfor %}

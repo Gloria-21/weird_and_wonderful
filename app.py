@@ -97,11 +97,18 @@ def login():
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
-    # take the session user's username from de db
-    username: mongo.db.users.find_one(
-            {"username": session["user"]})["username"]
+
     if session["user"]:
-        return render_template("profile.html", username=username)
+        # take the session user's username from de db
+        username = mongo.db.users.find_one(
+            {"username": session["user"]})["username"]
+        # find the lots created by the user
+        lots = list(mongo.db.lots.find(
+            {"created_by": username}))
+
+        return render_template(
+            "profile.html", username=username,
+            lots=lots)
 
     return redirect(url_for("login"))
 
@@ -135,8 +142,8 @@ def add_lot():
     return render_template("add_lot.html", categories=categories)
 
 
-@app.route("/edit_lot/<name_id>", methods=["GET", "POST"])
-def edit_lot(name_id):
+@app.route("/edit_lot/<lot_id>", methods=["GET", "POST"])
+def edit_lot(lot_id):
     # allows user to edit a lot
     if request.method == "POST":
         submit = {
@@ -146,7 +153,7 @@ def edit_lot(name_id):
             "estimate_price": request.form.get("estimate_price"),
             "created_by": session["user"]
         }
-        mongo.db.lots.update({"_id": ObjectId(name_id)}, submit)
+        mongo.db.lots.update({"_id": ObjectId(lot_id)}, submit)
         flash("Lot sucessfully updated")
 
     name = mongo.db.find_one({"_id": ObjectId(name_id)})

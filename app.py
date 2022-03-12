@@ -156,9 +156,9 @@ def edit_lot(lot_id):
         mongo.db.lots.update({"_id": ObjectId(lot_id)}, submit)
         flash("Lot sucessfully updated")
 
-    name = mongo.db.find_one({"_id": ObjectId(name_id)})
+    lot = mongo.db.lots.find({"_id": ObjectId(lot_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
-    return render_template("edit_lot.html", name=name, categories=categories)
+    return render_template("edit_lot.html", lot=lot, categories=categories)
 
 
 if __name__ == "__main__":

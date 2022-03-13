@@ -144,7 +144,7 @@ def add_lot():
 
 @app.route("/edit_lot/<lot_id>", methods=["GET", "POST"])
 def edit_lot(lot_id):
-    # allows user to edit a lot
+    """ allows user to edit a lot """
     if request.method == "POST":
         submit = {
             "category_name": request.form.get("category_name"),
@@ -156,7 +156,7 @@ def edit_lot(lot_id):
         mongo.db.lots.update({"_id": ObjectId(lot_id)}, submit)
         flash("Lot sucessfully updated")
 
-    lot = mongo.db.lots.find({"_id": ObjectId(lot_id)})
+    lot = mongo.db.lots.find_one({"_id": ObjectId(lot_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("edit_lot.html", lot=lot, categories=categories)
 

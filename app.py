@@ -161,6 +161,17 @@ def edit_lot(lot_id):
     return render_template("edit_lot.html", lot=lot, categories=categories)
 
 
+@app.route("/delete_lot/<lot_id>")
+def delete_lot(lot_id):
+    """
+    Allow user to delete a lot
+
+    """
+    mongo.db.lots.delete_one({"_id": ObjectId(lot_id)})
+    flash("Your lot has been deleted")
+    return redirect(url_for("profile", username=session['user']))
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

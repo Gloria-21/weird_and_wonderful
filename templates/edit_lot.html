@@ -3,47 +3,50 @@
 <section class="py-5">
     <div class="container px-4 px-lg-5 mt-5">
         <div class="row"><h3 class="strong">Edit Lot</h3></div>
-      <form method="POST" action="{{ url_for('edit_lot', lot_id=lot._id) }}">
-        <div class="card_lot">
-          <!--category selection taken from mini project-->
-          <div class="form-group">
-            <label for="category_name"> Category </label>
-            <select id="category_name" name="category_name" class="form-control" required>
-              <option value="" disabled selected>Choose Category</option>
-              {% for category in categories %}
-                {% if category.category_name == lot.category_name %}
+        <br>
+      
+        <form method="POST" action="{{ url_for('edit_lot', lot_id=lot._id) }}">
+          <div class="card_lot">
+              <!--category selection taken from mini project-->
+              <div class="form-group">
+                <label for="category_name"> Category </label>
+                <select id="category_name" name="category_name" class="form-control" required>
+                  <option value="" disabled selected>Choose Category</option>
+                  {% for category in categories %}
+                  {% if category.category_name == lot.category_name %}
                   <option value="{{ category.category_name}}" selected>{{ category.category_name}}</option>
-                {% else %}
+                  {% else %}
                   <option value="{{ category.category_name}}">{{ category.category_name}}</option>
-                {% endif %}
-              {% endfor %}
-            </select>
+                  {% endif %}
+                  {% endfor %}
+                </select>
+              </div>
+            <!--Lot name-->
+            <label for="name"> Name of your lot</label>
+            <input type="text" name="name" id="name" placeholder="{{ lot.name }}" class="form-control"
+              value="{{ lot.name }}" required>
+            <!--Lot description-->
+            <label for="description"> Brief description</label>
+            <input type="text" name="description" id="description" placeholder="{{ lot.description }}"
+              class="form-control" value="{{ lot.description }}" required>
+            <!--Estimated price-->
+            <label for="estimate_price"> Estimated price</label>
+            <input type="text" name="estimate_price" id="estimate_price" placeholder="{{ lot.estimate_price}}"
+              class="form-control" value="{{ lot.estimate_price}}" required>
+            <!--Submision button-->
+            <div class="form-group">
+              <button type="submit" class="col s4 btn btn-secondary"> Edit Lot <i class="fas fa-edit"></i></button>
+            </div>
           </div>
-          <!--Lot name-->
-          <label for="name"> Name of your lot</label>
-          <input type="text" name="name" id="name" placeholder="{{ lot.name }}" class="form-control" value="{{ lot.name }}" required>
-          <!--Lot description-->
-          <label for="description"> Brief description</label>
-          <input type="text" name="description" id="description" placeholder="{{ lot.description }}" class="form-control" 
-          value="{{ lot.description }}" required>
-          <!--Estimated price-->
-          <label for="estimate_price"> Estimated price</label>
-          <input type="text" name="estimate_price" id="estimate_price" placeholder="{{ lot.estimate_price}}" class="form-control" 
-            value="{{ lot.estimate_price}}" required>
-        </div>
-        <!--Submition button-->
-        <div class="form-group">
-          <button type="submit" class="col s4 btn btn-secondary"> Edit Lot <i class="fas fa-edit"></i></button>
-        </div>
+        </form>
     </div>
-    </form>
-    <div class="row">
-      <div class="col s12">
-        <p class="center-align">
-          <a href="{{ url_for('profile', username=session['user']) }}">Go back to your profile</a>
-        </p>
+      <div class="row">
+        <div class="col s12">
+          <p class="center-align">
+            <a href="{{ url_for('profile', username=session['user']) }}">Go back to your profile</a>
+          </p>
+        </div>
       </div>
-    </div>
-    </div>
-  </section>
+      </div>
+      </section>
   {% endblock %}

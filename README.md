@@ -151,7 +151,7 @@ To check the website performance level as well as the speed I used [Google light
 
 3. As a seller I want to create a lot to resell my items. The user can, once the profile is created, to add items and create a lot.
 
-4. As a seller I want to be able to edit and delete my lot as well as see my bids. The user will be able also to edit and delete items from the lots created beforehand.
+4. As a seller I want to be able to edit and delete my lot. The user will be able also to edit and delete items from the lots created beforehand.
 
 ## Fixed bugs
 
@@ -161,12 +161,11 @@ To check the website performance level as well as the speed I used [Google light
 
 * Whilst creating the functionality of adding a new lot on the profile, I encounter a few issues, being one of them not being able to render the page. Checking the werkzeug.routing.BuildError I realised that he return redirect on my app.py was missing the username
 
-* Fixing the Edit lot functionality has been quite challenging to say the least, first the form wasn't rendering properly as I wasn't targeting the correct argument, 
+* Fixing the Edit lot functionality has been quite challenging to say the least, first the form wasn't rendering properly as I wasn't targeting the correct argument. Once that was fixed,the page was showing an error saying the collection was not callable as the update method didn't exist. I replace the update method for update_one and also introduced the $ operator
 ## Unfixed bugs
 
 * I decided to use a start bootstrap template as the time that I had to develop this project was quite tight, however, I have found quite challeging the adaptation of that template to my project. I thought to create my own CSS to adapt my project to it, however, I found it was easier to add styling classes into the HTML and modify the CSS given by the template. Due to the difficulty to adapt the template the color palalette and the font before mentioned haven't been used in their entirety.
 
-* Edit lot -collection object is not callable 
 
 ## Suported screen and browsers
 

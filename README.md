@@ -160,11 +160,13 @@ To check the website performance level as well as the speed I used [Google light
 * I created flash messages to be displayed on the screen in order to inform the user whether the registration was successful when an account was created, also, when the username or password wasn't correct or to also inform the user when it was being logged out. There was some issues as the messages weren't displaying on the screen. The bug was located on the jinja code on the base.html
 
 * Whilst creating the functionality of adding a new lot on the profile, I encounter a few issues, being one of them not being able to render the page. Checking the werkzeug.routing.BuildError I realised that he return redirect on my app.py was missing the username
+
+* Fixing the Edit lot functionality has been quite challenging to say the least, first the form wasn't rendering properly as I wasn't targeting the correct argument, 
 ## Unfixed bugs
 
 * I decided to use a start bootstrap template as the time that I had to develop this project was quite tight, however, I have found quite challeging the adaptation of that template to my project. I thought to create my own CSS to adapt my project to it, however, I found it was easier to add styling classes into the HTML and modify the CSS given by the template. Due to the difficulty to adapt the template the color palalette and the font before mentioned haven't been used in their entirety.
 
-* Edit lot page is nor rendering properly, I am having issues wiring it withing the profile page
+* Edit lot -collection object is not callable 
 
 ## Suported screen and browsers
 

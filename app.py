@@ -153,8 +153,9 @@ def edit_lot(lot_id):
             "estimate_price": request.form.get("estimate_price"),
             "created_by": session["user"]
         }
-        mongo.db.lots.update({"_id": ObjectId(lot_id)}, submit)
+        mongo.db.lots.update_one({"_id": ObjectId(lot_id)}, {'$set': submit})
         flash("Lot sucessfully updated")
+        return redirect(url_for("profile", username=session['user']))
 
     lot = mongo.db.lots.find_one({"_id": ObjectId(lot_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)

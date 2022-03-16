@@ -2,7 +2,7 @@
 
 ![Alt text](/static/img/responsive_mockup.png)
 
-[Deployed website](https://8080-gloria21-weirdandwonderf-v78a5s6dbil.ws-eu30.gitpod.io/index)
+[Deployed website](https://8080-gloria21-weirdandwonderf-v78a5s6dbil.ws-eu34.gitpod.io/)
 
 Due to my background as an Art Historian I thought it would be a good idea of instead of creating a online cookbook,
 as suggested on the Assesment Handbook, to take the structure of the project and adapt it to online an aution house.

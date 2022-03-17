@@ -128,6 +128,9 @@ To check the validity of the codes I have used
    - For [index.html](/static/img/validator/index.png)
    - For [about.html](/static/img/validator/about.png)
    - For [profile.html](/static/img/validator/profile.png)
+   - For [edit_lot.html](/static/img/validator/edit_lot.png)
+   - For [add_lot.html](/static/img/validator/add_lot.png)
+
 
 
 * [W3C CSS Validation](https://jigsaw.w3.org/css-validator/)
@@ -143,15 +146,18 @@ To check the website performance level as well as the speed I used [Google light
  - [Index](/static/img/validator/index_lighthouse.png)
  - [About](/static/img/validator/about_lighthouse.png)
  - [Profile](/static/img/validator/profile_lighthouse.png)
+ - [Add_lot](/static/img/validator/add_lot_lighthouse.png)
+ - [Edit_lot](/static/img/validator/edit_lot_lighthouse.png)
 ## Test user stories
 
 1. As a new user I want to be able to create a new account and be part of Weird and Wonderful. To create an account the new user has different options. The most obvious one is to click in Create account button on the navbar, also on the About secction there are two buttons that lead to the Create Account section. Also on at the bottom of the Log In section there is a link to Create Account. 
 
 2. As a new user I want information of how the action works and upcoming auctions. The new user will find all the information on how the page works in the About section. Also on the Home page the user can see the lots included in the next auction. Due to time constrictions I won't be able to develop more than one upcoming Auctions. 
 
-3. As a seller I want to create a lot to resell my items. The user can, once the profile is created, to add items and create a lot.
+3. As a seller I want to create a [lot](/static/img/size/add_lot_desktop.png) to resell my items. The user can, once the profile is created, to add items and create a [lot](/static//img/size/add_lot_mobile.png).
 
-4. As a seller I want to be able to edit and delete my lot. The user will be able also to edit and delete items from the lots created beforehand.
+
+4. As a seller I want to be able to [edit](/static/img/size/edit_lot_desktop.png) and [delete](/static/img/size/delete_lot_desktop.png) my lot. The user will be able also to [edit](/static/img/size/edit_lot_mobile.png) and [delete](/static/img/size/delete_lot_mobile.png) items from the lots created beforehand.
 
 ## Fixed bugs
 
@@ -164,7 +170,7 @@ To check the website performance level as well as the speed I used [Google light
 * Fixing the Edit lot functionality has been quite challenging to say the least, first the form wasn't rendering properly as I wasn't targeting the correct argument. Once that was fixed,the page was showing an error saying the collection was not callable as the update method didn't exist. I replace the update method for update_one and also introduced the $ operator
 ## Unfixed bugs
 
-* I decided to use a start bootstrap template as the time that I had to develop this project was quite tight, however, I have found quite challeging the adaptation of that template to my project. I thought to create my own CSS to adapt my project to it, however, I found it was easier to add styling classes into the HTML and modify the CSS given by the template. Due to the difficulty to adapt the template the color palalette and the font before mentioned haven't been used in their entirety.
+* I decided to use a start bootstrap template as the time that I had to develop this project was quite tight, however, I have found quite challeging the adaptation of that template to my project. I thought to create my own CSS to adapt my project to it, however, I found it was easier to add styling classes into the HTML and modify the CSS given by the template. Due to the difficulty to adapt the template the color palalette and the font before mentioned haven't been used in their entirely.
 
 
 ## Suported screen and browsers

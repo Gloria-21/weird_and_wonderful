@@ -2,7 +2,7 @@
 
 ![Alt text](/static/img/responsive_mockup.png)
 
-[Deployed website](https://8080-gloria21-weirdandwonderf-v78a5s6dbil.ws-eu34.gitpod.io/)
+[Deployed website](https://weird-and-wonderful-onrender-com.onrender.com)
 
 Due to my background as an Art Historian I thought it would be a good idea of instead of creating a online cookbook,
 as suggested on the Assesment Handbook, to take the structure of the project and adapt it to online an aution house.
@@ -109,6 +109,7 @@ As it follows below
 9. [MongoDB](https://www.mongodb.com/)
 
     Used to create the database that holds all the data from the website
+    Recently the site has been migrated to [Render](https://render.com/)
 
 10. [StartBoostrap](https://startbootstrap.com/)
 

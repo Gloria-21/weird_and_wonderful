@@ -97,11 +97,18 @@ def login():
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
-    # take the session user's username from de db
-    username: mongo.db.users.find_one(
-            {"username": session["user"]})["username"]
+
     if session["user"]:
-        return render_template("profile.html", username=username)
+        # take the session user's username from de db
+        username = mongo.db.users.find_one(
+            {"username": session["user"]})["username"]
+        # find the lots created by the user
+        lots = list(mongo.db.lots.find(
+            {"created_by": username}))
+
+        return render_template(
+            "profile.html", username=username,
+            lots=lots)
 
     return redirect(url_for("login"))
 
@@ -114,29 +121,56 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/profile/<lot>", methods=["GET", "POST"])
-def create(lot):
+@app.route("/add_lot", methods=["GET", "POST"])
+def add_lot():
     # allows user to create a lot
     if request.method == "POST":
         lot = {
+            "category_name": request.form.get("category_name"),
             "name": request.form.get("name").lower(),
             "description": request.form.get("description").lower(),
             "estimate_price": request.form.get("estimate_price"),
-            "image_url": request.form.get("image_url"),
             "created_by": session["user"]
-            }
+        }
+        mongo.db.lots.insert_one(lot)
+        flash("Your lot has been successfully added")
+        return redirect(url_for("profile", username=session['user']))
 
-        existing_lot = mongo.db.lots.find_one(
-            {"name": request.form.get("name").lower()})
-    if existing_lot:
-        flash("Lot already registered", "error")
-        return render_template("profile.html", lot=existing_lot)
+    return render_template("add_lot.html")
 
-    # using getlogin() returning username
-    user = os.getlogin()
-    mongo.db.lots.insert_one(lot)
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("add_lot.html", categories=categories)
 
-    return redirect(url_for("profile"))
+
+@app.route("/edit_lot/<lot_id>", methods=["GET", "POST"])
+def edit_lot(lot_id):
+    """ allows user to edit a lot """
+    if request.method == "POST":
+        submit = {
+            "category_name": request.form.get("category_name"),
+            "name": request.form.get("name").lower(),
+            "description": request.form.get("description").lower(),
+            "estimate_price": request.form.get("estimate_price"),
+            "created_by": session["user"]
+        }
+        mongo.db.lots.update_one({"_id": ObjectId(lot_id)}, {'$set': submit})
+        flash("Lot sucessfully updated")
+        return redirect(url_for("profile", username=session['user']))
+
+    lot = mongo.db.lots.find_one({"_id": ObjectId(lot_id)})
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("edit_lot.html", lot=lot, categories=categories)
+
+
+@app.route("/delete_lot/<lot_id>")
+def delete_lot(lot_id):
+    """
+    Allow user to delete a lot
+
+    """
+    mongo.db.lots.delete_one({"_id": ObjectId(lot_id)})
+    flash("Your lot has been deleted")
+    return redirect(url_for("profile", username=session['user']))
 
 
 if __name__ == "__main__":

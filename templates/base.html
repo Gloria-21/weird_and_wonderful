@@ -45,6 +45,7 @@
                             </li>
                             <li><a class="dropdown-item" href="#!">Jewelery</a></li>
                             <li><a class="dropdown-item" href="#!">European Porcelain</a></li>
+                            <li><a class="dropdown-item" href="#!">Furniture</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -75,12 +76,12 @@
             </div>
         </div>
     </header>
-    <!-- Section-->
 
+    <!--Flash messages -->
     <div>
         {% with messages = get_flashed_messages() %}
         {% if messages %}
-        {% for messages in messages %}
+        {% for message in messages %}
         <div class="row flashes">
             <h4 class="center-align">{{ message }}</h4>
         </div>
